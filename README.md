@@ -34,8 +34,8 @@ Este script tiene en la carpeta de "iconos" un archivo PHP el cual debes ejecuta
 Changelog
 
 [V 1.6] 
--Now the Icon Manager support Teaspeak.de Functions updated.
--Added new libraries
+- Now the Icon Manager support Teaspeak.de Functions updated.
+- Added new libraries
 
 [V 1.5]
 - Inicio remantencion de proyecto

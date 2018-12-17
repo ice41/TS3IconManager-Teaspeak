@@ -1,70 +1,79 @@
-TS3IconManager
-Management ranges ts by UID This little script uses Bootstrap and TS3PHP Framework, this script allows to assign ranges (based on sort_id ranges in ts) based on a UID
 
-Functions
--Assign Icons using UID
+## TS3IconManager
+English Version of this file [here](./README_EN.md)
 
--List Of icons according to the SORT_ID
+Manejo de rangos de servidor TeamSpeak3 mediande UID
 
--Confirmation Via code sent by POKE in ts3
+Este script permite poder asignarse rangos (basado en el sort_id de los rangos en ts) en base a una UID de manera automatica sin necesidad de un administrador.
 
--Assigning Clean and saving resources of the connection query
+## Funciones
+- Asignar iconos usando UID
+- Listado de iconos segun el SORT_ID
+- Confirmacion via codigo enviado por POKE en ts3
+- Asignacion limpia y ahorrando recursos de la conexion query
+- Registro de los cambios realizados (Soon)
+- Sistema de idiomas (Actualmente disponible: ES,EN,PL)
 
--Record Changes (Soon)
+## Requisitos
+- PHP 5.6.4+ o superior (Con modulo Sockets activo)
+- Servidor HTTP con soporte PHP (Ejemplo: Apache, Nginx, XAMPP)
 
--System Languages (ES,EN,PL,PT)
+## Instalacion
+- Editar archivo data/config.php
 
-#Requisites -Support PHP7 -WebHost whit socket connection (Recommend Linux WebHost)
+## Sync de iconos
+- Opcion 1 (Manual):
+Este script tiene en la carpeta de "iconos" un archivo PHP el cual debes ejecutar periodicamente segun edites uno u otro rango ya que para ahorrar recursos y para evitar un posible "Banned From Query" los iconos no se descargan automaticamente a menos que se ejecute cada cierto tiempo el archivo geticonos.php.
 
-Installation
-You just have to edit the file (data / config.php) to use the script without any problem.
+- Opcion 2 (CRON):
+```sh
+*/10 * * * * /usr/bin/php /opt/test.php
+```
 
-Sync icons
-This script is in the folder "icons" a PHP file which should run periodically according to editing one or another range as to save resources and to avoid a possible "Banned From Query" icons are not automatically downloaded unless run every so often the geticonos.php file.
-Can you execute direct in browser to make first download and see errors.
-
+## Changelog
 Changelog
-[V 1.5] -Now the Icon Manager support Teaspeak.de Functions updated.
+[V 1.6] 
+-Now the Icon Manager support Teaspeak.de Functions updated.
 -Added new libraries
 
-Changelog
-[V 1.4] -Now the footer shows the version of the script based on a new parameter in config.php file (Using Dev)
+[V 1.5]
+- Inicio remantencion de proyecto
+- Migrar Bootstrap 3 a Bootstrap 4 (Lavado de cara)
+- Agregado License
+- Actualizacion TS3API
 
--Added support for using more than one group of TS3 SortID
-
--Added File language PL, Contributed by Luki
+[V 1.4]
+- Ahora los footer muestran la version del script en base a un nuevo parametro en el archivo config.php (Uso del Dev)
+- Añadido soporte para usar mas de un SortID group de TS3
+- Añadido archivo idioma PL, Aportado por Luki
 
 [V 1.3]
-
--Fixed File (./icons/geticonos.php) which had an error reading configuration file.
-
--implemented Language system currently available in Spanish and English (To add a new language using ./lang/es.php basis for creating new languages).
+- Arreglado en archivo (./icons/geticonos.php) el cual tenia un error de lectura del archivo de configuracion.
+- Implementado un sistema de idioma, actualmente esta disponible el español y el ingles (Se puede añadir un nuevo idioma usando de base a ./lang/es.php para crear nuevos idiomas).
 
 [V 1.2]
+- Arreglado un warning en ./modulos/iconizar.php el cual al no haber cambios intentaba tomar una variable null.
+- Añadido sistema de confirmacion via codigo enviado por poke en ts.
+- Correcciones ligeras de codigo.
 
--Fixed One warning in ./modulos/iconizar.php which by no change was trying to take a null variable.
+## Permisos TSQuery
+Estos permisos son necesarios para que el script funcione correctamente
 
--Added Confirmation system via code sent by poke in ts.
+| Permiso | Descripcion |
+| ------ | ------ |
+| b_virtualserver_client_list | Para listar usuarios del servidor |
+| b_virtualserver_servergroup_list | Listar los grupos del servidor |
+| b_virtualserver_servergroup_client_list | Listar los miembros de dicho grupo |
+| i_group_member_add_power | Poder para añadir a un miembro |
+| i_group_member_remove_power | Poder para remover a un miembro |
+| i_client_poke_power | Poder para enviar poke |
 
--Correcciones Of code.
-
-Connection permissions for the query
-Below the permissions that you must have the account used in the query connection is ready.
-
--b_virtualserver_client_list || Para listar usuarios del servidor
-
--b_virtualserver_servergroup_list || Listar los grupos del servidor
-
--b_virtualserver_servergroup_client_list || Listar los miembros de dicho grupo
-
--i_group_member_add_power || Poder para añadir a un miembro
-
--i_group_member_remove_power || Poder para remover a un miembro
-
--i_client_poke_power || Poder para enviar poke
 
 License
+----
+
 MIT
+
 
 Credits Doc94
 https://github.com/Doc94/TS3IconManager

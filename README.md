@@ -12,15 +12,20 @@ Functions
 
 -Record Changes (Soon)
 
--System Languages (ES,EN,PL)
+-System Languages (ES,EN,PL,PT)
 
-#Requisites -Support PHP5 -WebHost whit socket connection (Recommend Linux WebHost)
+#Requisites -Support PHP7 -WebHost whit socket connection (Recommend Linux WebHost)
 
 Installation
 You just have to edit the file (data / config.php) to use the script without any problem.
 
 Sync icons
-This script is in the folder "icons" a PHP file which should run periodically according to editing one or another range as to save resources and to avoid a possible "Banned From Query" icons are not automatically downloaded unless run every so often the geticonos.php file
+This script is in the folder "icons" a PHP file which should run periodically according to editing one or another range as to save resources and to avoid a possible "Banned From Query" icons are not automatically downloaded unless run every so often the geticonos.php file.
+Can you execute direct in browser to make first download and see errors.
+
+Changelog
+[V 1.5] -Now the Icon Manager support Teaspeak.de Functions updated.
+-Added new libraries
 
 Changelog
 [V 1.4] -Now the footer shows the version of the script based on a new parameter in config.php file (Using Dev)
@@ -60,3 +65,6 @@ Below the permissions that you must have the account used in the query connectio
 
 License
 MIT
+
+Credits Doc94
+https://github.com/Doc94/TS3IconManager

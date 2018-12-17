@@ -68,3 +68,7 @@ MIT
 
 Credits Doc94
 https://github.com/Doc94/TS3IconManager
+
+Corrections of code by Nped.pt
+-Ice41
+-Herbal

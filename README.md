@@ -32,6 +32,7 @@ Este script tiene en la carpeta de "iconos" un archivo PHP el cual debes ejecuta
 
 ## Changelog
 Changelog
+
 [V 1.6] 
 -Now the Icon Manager support Teaspeak.de Functions updated.
 -Added new libraries

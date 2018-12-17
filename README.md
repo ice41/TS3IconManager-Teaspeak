@@ -1,6 +1,6 @@
 
 ## TS3IconManager
-English Version of this file [here](./README_EN.md)
+Original Version of this code [here](https://github.com/Doc94/TS3IconManager)
 
 Manejo de rangos de servidor TeamSpeak3 mediande UID
 
@@ -75,8 +75,8 @@ License
 MIT
 
 
-Credits Doc94
-https://github.com/Doc94/TS3IconManager
+Credits [Doc94](https://github.com/Doc94/TS3IconManager)
+
 
 Corrections of code by Nped.pt
 -Ice41
